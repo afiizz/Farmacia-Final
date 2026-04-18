@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--para que sea responsive-->
+
+    <title>PharmaClick | Tu Salud Sin Esperas</title>
+
+    <meta name="description" content="PharmaClick: tu farmacia online de confianza evita colas largas en tu farmacia"> <!--SEO-->
+    <meta name="keywords" content="farmacia, salud">
+    <meta name="author" content="Afia Zafar">
+
+    <base href="./"> <!--es la base de las URL, que es la carpeta donde esta todo-->
+    <link rel="icon" type="image/png" href="images/PharmaClick-logo.png">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+  </head>
+
+<body>
+    <main id="main-content">
+        <section class="page-header">
+            <h1>Resumen de tu Ticket</h1>
+        </section>
+
+        <div id="lista-compra" style="padding: 20px; max-width: 500px; margin: 0 auto; background: white; border-radius: 10px;">
+            </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="mostrarTicketFinal()" class="btn-add">Generar Ticket Final</button>
+            <button onclick="localStorage.clear(); location.reload();" style="background:none; border:none; color:red; cursor:pointer;">Vaciar</button>
+        </div>
+    </main>
+
+    <script>
+        // Código para leer la lista y mostrarla
+        const lista = JSON.parse(localStorage.getItem('pharma-ticket')) || [];
+        const contenedor = document.getElementById('lista-compra');
+
+        if(lista.length === 0) {
+            contenedor.innerHTML = "<p>No hay productos.</p>";
+        } else {
+            lista.forEach(p => {
+                contenedor.innerHTML += `<p>• ${p.nombre} (${p.precio})</p>`;
+            });
+        }
+
+        // LA MINIVENTANA (Detalles del ticket)
+        function mostrarTicketFinal() {
+            if(lista.length === 0) return alert("El ticket está vacío");
+
+            let detalles = "--- DETALLES DEL TICKET ---\n\n";
+            lista.forEach(p => {
+                detalles += "- " + p.nombre + "\n";
+            });
+            detalles += "\nPresenta este código en caja: PH-2026";
+            
+            alert(detalles); // Esto es la miniventana con los detalles
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,3 +1,10 @@
+/*EFECTOS ANIMACION PARA Q DESLICE*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 :root {
     --primary: #2a9d8f;      /* Verde */
     --secondary: #264653;    /* Azul oscuro */
@@ -395,7 +402,7 @@ footer a {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
 
     letter-spacing: 0.5px;
     text-transform: uppercase;
