@@ -1,0 +1,466 @@
+:root {
+    --primary: #2a9d8f;      /* Verde */
+    --secondary: #264653;    /* Azul oscuro */
+    --golden: #e9c46a;       /* Dorado suave */
+    --light: #f4f9f9;        /* Fondo claro */
+    --dark: #333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+/*HEADER Y NAVEGACION*/
+header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;   /*para que el nav siempre esté arriba*/
+    top: 0;
+    z-index: 1000;
+}
+
+/*nombre del logo*/
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*menu*/
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 500;
+    padding: 8px 0; /*epacio arriba y abajo del texto*/
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent; /*línea por defecto */
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary); /*linea*/
+}
+
+nav ul li a.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary); /* Aquí aparece la línea */
+    font-weight: bold;
+}
+
+/*PARTE PRINCIPAL*/
+.hero {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    color: var(--white);
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--secondary);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    border: 2px solid var(--white);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta:hover {
+    background-color: transparent; 
+    color: var(--white); 
+    transform: scale(1.05);   
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/*INFO EXTRA*/
+#mision , #funcion{
+    padding: 60px 5%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#mision h2, #funcion h2 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+/*LINEA BAJO TITULOS*/
+#mision h2::after, #funcion h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 10px auto 0;
+}
+
+#mision p, #funcion ol p {
+    font-size: 1rem;
+    color: var(--dark);
+    opacity: 0.8;
+    margin-top: 15px;
+}
+
+#funcion ol {
+    list-style: none; 
+    padding: 0;
+}
+
+#funcion li {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-top: 30px;
+    display: block;
+}
+
+/*SECCION DE CONFIANZA*/
+#confianza {
+    padding: 80px 5%;
+    background-color: #f0f7f6;
+    text-align: center;
+}
+
+.confianza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.confianza-card {
+    background: var(--white);
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-bottom: 5px solid var(--primary);
+}
+
+.confianza-card h3 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+/*SECCION FAQ*/
+#faq {
+    padding: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-container {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/*TITULOS DE CONFIANZA Y FAQ*/
+#confianza h2, #faq h2 {
+    color: var(--secondary);
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 40px 5% 20px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/*PARA EL RESPONSIVE*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/*-------------------------------------------------------------*/
+
+/*MEDICAMENTOS, CUIDADO Y MOVILIDAD*/
+.page-header {
+    background: linear-gradient(to bottom, #f0f7f6 0%, var(--white) 100%);
+    padding: 60px 5% 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.page-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 50px;
+    overflow: hidden; /* Para que las esquinas del input sigan la forma del contenedor */
+}
+
+.search-container input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-right: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.btn-search {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-search:hover {
+    background-color: var(--secondary);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /*crea 3 columnas*/
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*IMAGENES*/
+.product-image img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-descr {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+
+    flex-grow: 1;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.btn-add:active {
+    transform: scale(0.95);
+}
+
+.btn-add:hover {
+    background-color: var(--secondary);
+}
+
+/* --- RESPONSIVE (Móvil y Tablet) --- */
+
+/* En tablets: de 3 columnas pasamos a 2 */
+@media (max-width: 950px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* En móviles: 1 sola columna para que se vea grande */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    
+    .product-card:hover {
+        /* En móvil mejor que no suba tanto para no tapar otros elementos */
+        transform: translateY(-5px);
+    }
+}
+
+
+/*-------------------------------------------------------------*/
+
+/*CONTACTO*/
+.contacto-container {
+    padding: 40px 5%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+
+
