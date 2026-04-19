@@ -132,7 +132,7 @@ function avisarReceta() {
     
     if (check.checked) {
         // Si quieres que pase algo visual, podemos cambiar el color del total o sacar un mensaje
-        suma.style.color = "#e67e22"; // Color naranja para indicar que el precio cambiará con receta
+        //suma.style.color = "#e67e22"; // Color naranja para indicar que el precio cambiará con receta
         alert("📝 Receta anotada. El descuento de la Seguridad Social se aplicará al pagar en la farmacia.");
     } else {
         suma.style.color = "#2a9d8f"; // Vuelve al color original (verde)
