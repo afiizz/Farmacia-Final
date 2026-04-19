@@ -39,27 +39,54 @@
             <h1>Mi Carrito 🛒</h1>
         </section>
 
+        <!--EL CUADRITO DONDE ESTA EL RESUMEN-->
         <div id="contenedor-carrito" style="max-width: 600px; margin: 0 auto; padding: 20px; background: white; border-radius: 10px;"></div>
 
+        <!--VACIAR EL CARRO-->
         <div style="text-align: center; margin-top: 20px;">
             <button onclick="vaciarCarrito()" style="background: #ff4d4d; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">
                 🗑️ Vaciar Carrito
             </button>
         </div>
 
+        <!--VOLVER-->
         <div style="text-align: center; margin: 20px;">
             <a href="index.html" style="color: #2a9d8f; font-weight: bold; text-decoration: none;">← Seguir comprando</a>
         </div>
 
+        <!--MARCAR SI TIENE RECETA-->
         <div id="zona-receta" style="text-align: center; background: #f0fdfa; padding: 15px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
             <label style="cursor: pointer; font-weight: bold;">
-                <input type="checkbox" id="check-receta"> Tengo receta médica 📝
+                <input type="checkbox" id="check-receta" onchange="avisarReceta()"> Tengo receta médica 📝
             </label>
         </div>
 
+        <!--TOTAL BOTON PARA EL TICKET-->
         <div style="text-align: center; padding: 20px; border-top: 2px solid #2a9d8f;">
             <h2>Total: <span id="suma-total">0.00</span>€</h2>
             <button onclick="generarTicketFinal()" class="btn-add" style="width: 100%; margin-top: 15px;">GENERAR TICKET FINAL</button>
+        </div>
+
+        <!--PARA GENERAR TICKET-->
+        <div id="modal-ticket" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
+    
+        <div id="ticket-imprimir" style="background:white; width:90%; max-width:400px; padding:20px; border-radius:10px; position:relative; font-family: 'Courier New', Courier, monospace;">
+            <h2 style="text-align:center;">PHARMACLICK</h2>
+            <p style="text-align:center;">Tu Salud Sin Esperas</p>
+            <hr>
+            <div id="contenido-ticket-final"></div>
+            <hr>
+            <div id="aviso-receta-ticket" style="color:red; font-weight:bold; text-align:center; display:none;">
+                ⚠️ PRESENTA RECETA MÉDICA
+            </div>
+            <h3 style="text-align:center;">Total: <span id="total-ticket-final"></span>€</h3>
+            <p style="text-align:center; font-size:1.2rem; font-weight:bold;" id="codigo-ticket"></p>
+            
+            <div style="display:flex; gap:10px; margin-top:20px;">
+                <button onclick="window.print()" style="flex:1; padding:10px; background:#2a9d8f; color:white; border:none; border-radius:5px; cursor:pointer;">Imprimir / PDF</button>
+                
+                <button onclick="cerrarYFinalizar()" style="flex:1; padding:10px; background:#ff4d4d; color:white; border:none; border-radius:5px; cursor:pointer;">Cerrar y Salir</button>
+            </div>
         </div>
 
         <script src="JS/script.js"></script>
