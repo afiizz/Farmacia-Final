@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--para que sea responsive-->
 
-    <title>PharmaClick | Tu Salud Sin Esperas</title>
+    <title>Mi Carrito | Tu Salud Sin Esperas</title>
 
     <meta name="description" content="PharmaClick: tu farmacia online de confianza evita colas largas en tu farmacia"> <!--SEO-->
     <meta name="keywords" content="farmacia, salud">
@@ -18,45 +18,53 @@
 
 <body>
     <main id="main-content">
+        <header role="banner">
+            <div class="logo">
+                <a href="index.html">PharmaClick</a>
+            </div>
+            
+            <nav role="navigation" aria-label="Menú principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="medicamentos.html">Medicamentos</a></li>
+                    <li><a href="cuidado.html">Cuidado</a></li>
+                    <li><a href="movilidad.html">Movilidad</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="ticket.html" class="active">🛒 Carrito: <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
         <section class="page-header">
-            <h1>Resumen de tu Ticket</h1>
+            <h1>Mi Carrito 🛒</h1>
         </section>
 
-        <div id="lista-compra" style="padding: 20px; max-width: 500px; margin: 0 auto; background: white; border-radius: 10px;">
-            </div>
+        <div id="contenedor-carrito" style="max-width: 600px; margin: 0 auto; padding: 20px; background: white; border-radius: 10px;"></div>
 
         <div style="text-align: center; margin-top: 20px;">
-            <button onclick="mostrarTicketFinal()" class="btn-add">Generar Ticket Final</button>
-            <button onclick="localStorage.clear(); location.reload();" style="background:none; border:none; color:red; cursor:pointer;">Vaciar</button>
+            <button onclick="vaciarCarrito()" style="background: #ff4d4d; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">
+                🗑️ Vaciar Carrito
+            </button>
         </div>
+
+        <div style="text-align: center; margin: 20px;">
+            <a href="index.html" style="color: #2a9d8f; font-weight: bold; text-decoration: none;">← Seguir comprando</a>
+        </div>
+
+        <div id="zona-receta" style="text-align: center; background: #f0fdfa; padding: 15px; border-radius: 10px; max-width: 600px; margin: 20px auto;">
+            <label style="cursor: pointer; font-weight: bold;">
+                <input type="checkbox" id="check-receta"> Tengo receta médica 📝
+            </label>
+        </div>
+
+        <div style="text-align: center; padding: 20px; border-top: 2px solid #2a9d8f;">
+            <h2>Total: <span id="suma-total">0.00</span>€</h2>
+            <button onclick="generarTicketFinal()" class="btn-add" style="width: 100%; margin-top: 15px;">GENERAR TICKET FINAL</button>
+        </div>
+
+        <script src="JS/script.js"></script>
     </main>
 
-    <script>
-        // Código para leer la lista y mostrarla
-        const lista = JSON.parse(localStorage.getItem('pharma-ticket')) || [];
-        const contenedor = document.getElementById('lista-compra');
-
-        if(lista.length === 0) {
-            contenedor.innerHTML = "<p>No hay productos.</p>";
-        } else {
-            lista.forEach(p => {
-                contenedor.innerHTML += `<p>• ${p.nombre} (${p.precio})</p>`;
-            });
-        }
-
-        // LA MINIVENTANA (Detalles del ticket)
-        function mostrarTicketFinal() {
-            if(lista.length === 0) return alert("El ticket está vacío");
-
-            let detalles = "--- DETALLES DEL TICKET ---\n\n";
-            lista.forEach(p => {
-                detalles += "- " + p.nombre + "\n";
-            });
-            detalles += "\nPresenta este código en caja: PH-2026";
-            
-            alert(detalles); // Esto es la miniventana con los detalles
-        }
-    </script>
 </body>
 </html>
 
