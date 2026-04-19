@@ -141,8 +141,8 @@ function avisarReceta() {
 
 function buscarProducto() {
     // 1. Capturamos lo que se escribe
-    let input = document.getElementById('buscador');
-    let filtro = input.value.toLowerCase();
+    let input = document.getElementById('buscador').value.toLowerCase();
+    //let filtro = input.value.toLowerCase();
     
     // 2. Seleccionamos todas las tarjetas de productos
     let tarjetas = document.querySelectorAll('.product-card');

@@ -35,106 +35,107 @@
     </header>
 
     <main role="main" id="main-content">
-        <section class="page-header">
+        <section class="page-header" aria-labelledby="titulo-catalogo">
             <h1>Catálogo de Medicamentos</h1>
             <p>Busca lo que necesites y genera tu ticket para ahorrar tiempo en tu Farmacia</p>
 
             <div class="search-container">
-                <input type="text" id="buscador" onkeyup="buscarProducto()" placeholder="¿Qué medicamento buscas?">
-                <button class="btn-search">🔍 Buscar</button>
+                <label for="buscador" class="visually-hidden" style="display: none;">Buscar medicamento:</label>
+                <input type="search" id="buscador" onkeyup="buscarProducto()" placeholder="¿Qué medicamento buscas?">
+                <button class="btn-search" aria-label="buscar">🔍 Buscar</button>
             </div>
         </section>
 
         <section class="catalogo">
             <div class="product-grid">
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/paracetamol.jpeg" alt="Paracetamol 1g">
-                    </div>
+                    </figure>
                     <h3>Paracetamol Kern Pharma 1g</h3>
                     <p class="product-descr">Alivio eficaz del dolor leve o moderado y la fiebre. (40 comprimidos).</p>
                     <p class="product-price"><strong>Precio: 2,81€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Paracetamol Kern Pharma">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/ibuprofeno.jpeg" alt="Ibuprofeno 600mg">
-                    </div>
+                    </figure>
                     <h3>Ibuprofeno Kern Pharma 600mg</h3>
                     <p class="product-descr">Antiinflamatorio indicado para dolores musculares, dentales o menstruales.</p>
                     <p class="product-price"><strong>Precio: 2,97€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Ibuprofeno Kern Pharma">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/enantyum.jpg" alt="Enantyum 25mg">
-                    </div>
+                    </figure>
                     <h3>Enantyum 25mg</h3>
                     <p class="product-descr">Analgésico potente para dolores agudos de corta duración. (20 sobres).</p>
                     <p class="product-price"><strong>Precio: 4,50€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Enantyum">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/omeprazol.jpeg" alt="Omeprazol Alter 20mg">
-                    </div>
+                    </figure>
                     <h3>Omeprazol Alter 20mg</h3>
                     <p class="product-descr">Protector estomacal para el tratamiento del reflujo y la acidez. (28 cápsulas).</p>
                     <p class="product-price"><strong>Precio: 2,42€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Omeprazol">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/almaxForte.png" alt="Almax Forte 1.5g">
-                    </div>
+                    </figure>
                     <h3>Almax Forte 1.5g</h3>
                     <p class="product-descr">Antiácido en sobres para el alivio rápido del ardor de estómago. (24 sobres).</p>
                     <p class="product-price"><strong>Precio: 8,95€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Almax Forte">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/iberogast.jpg" alt="Iberogast Gotas">
-                    </div>
+                    </figure>
                     <h3>Iberogast Gotas</h3>
                     <p class="product-descr">Medicamento a base de plantas para trastornos digestivos y náuseas. (20 ml).</p>
                     <p class="product-price"><strong>Precio: 11,50€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Iberogast Gotas">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/frenadol.png" alt="Frenadol Forte">
-                    </div>
+                    </figure>
                     <h3>Frenadol Forte</h3>
                     <p class="product-descr">Combinación para reducir los síntomas de la gripe, tos y congestión. (10 sobres).</p>
                     <p class="product-price"><strong>Precio: 10,25€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Frenadol Forte">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/Vicks.jpg" alt="VapoRub Pomada">
-                    </div>
+                    </figure>
                     <h3>VapoRub Pomada</h3>
                     <p class="product-descr">Ungüento para el alivio de la tos y la congestión nasal mediante vapores. (50g).</p>
                     <p class="product-price"><strong>Precio: 7,40€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir VapoRub Pomada">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/medicamentos/jarabe-1440.jpg" alt="Bisolvon Mucolítico">
-                    </div>
+                    </figure>
                     <h3>Bisolvon Mucolítico</h3>
                     <p class="product-descr">Jarabe para facilitar la expulsión del exceso de moco en catarros. (200 ml).</p>
                     <p class="product-price"><strong>Precio: 9,15€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Bisolvon Mucolítico">Añadir</button>
                 </article>
             </div>
         </section>
@@ -145,20 +146,20 @@
         <div class="footer-grid">
             <section>
                 <h3>Contacto</h3>
-                <p>Email: pharmaclick@farmaceutica.es</p>
+                <p>Email: <a href="mailto:pharmaclick@farmaceutica.es>pharmaclick@farmaceutica.es"></a></p>
 
-                <h3>Teléfono</h3>
-                <p>+34 631 23 45 67</p>
+                <p>Teléfono: <a href="tel:+34631234567">+34 631 23 45 67</a></p>
             </section>
             <section>
                 <h3>Redes Sociales</h3>
-                <a href="https://twitter.com/..." aria-label="Twitter">Twitter</a>
-                <a href="https://www.instagram.com/?hl=es" aria-label="Instagram">Instagram</a>
-                <a href="https://www.tiktok.com/es-419/" aria-label="TikTok">TikTok</a>                
+                <a href="https://twitter.com/..." target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>                
             </section>
         </div>
         <p class="copyright">&copy; PharmaClick 2026 Todos los derechos reservados.</p>
     </footer>
+
 
     <script src="JS/script.js"></script>
     

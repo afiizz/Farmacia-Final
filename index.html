@@ -7,7 +7,7 @@
     <title>PharmaClick | Tu Salud Sin Esperas</title>
 
     <meta name="description" content="PharmaClick: tu farmacia online de confianza evita colas largas en tu farmacia"> <!--SEO-->
-    <meta name="keywords" content="farmacia, salud">
+    <meta name="keywords" content="farmacia, salud, ticket digital, medicamentos">
     <meta name="author" content="Afia Zafar">
 
     <base href="./"> <!--es la base de las URL, que es la carpeta donde esta todo-->
@@ -42,13 +42,13 @@
             <a href="#mision" class="btn-cta">Saber más</a>        
         </section>
 
-        <section id="mision" aria-label="Información relevante">
+        <section id="mision" aria-labelledby="mision-titulo">
             <h2>Nuestra Misión</h2>
             <p>En PharmaClick creemos que tu tiempo es valioso. Hemos nacido para digitalizar la experiencia en tu farmacia física, eliminando las esperas y facilitando el acceso a la información de tus productos de confianza.</p>
             <p>No somos una tienda, somos tu puente directo hacia una atención más ágil y personalizada.</p>
         </section>
 
-        <section id="funcion" aria-label="Como funciona">
+        <section id="funcion" aria-labelledby="funcion-titulo">
             <h2>¿Cómo Funciona?</h2>
             <ol>
                 <li>
@@ -67,7 +67,7 @@
             </ol>
         </section>
 
-        <section id="confianza" aria-label="confianza">
+        <section id="confianza" aria-labelledby="confianza-titulo">
             <h2 id="confianza-titulo">Tu Salud en Buenas Manos</h2>
             <div class="confianza-grid">
                 <article class="confianza-card">
@@ -87,23 +87,23 @@
             </div>
         </section>
 
-        <section id="faq" aria-label="faq">
+        <section id="faq" aria-labelledby="faq-titulo">
             <h2 id="faq-titulo">Preguntas Frecuentes</h2>
             <div class="faq-container">
-                <div class="faq-item">
-                    <h3>¿Tengo que pagar en la web?</h3>
+                <details class="faq-item">
+                    <summary>¿Tengo que pagar en la web?</summary>
                     <p>No, PharmaClick es gratuito. El pago de tus productos se realiza siempre en el mostrador de la farmacia al recoger tu pedido, así como presentar las recetas, si es el caso</p>
-                </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3>¿Cómo recibo el ticket?</h3>
+                <details class="faq-item">
+                    <summary>¿Cómo recibo el ticket?</summary>
                     <p>Al finalizar, se generará un código único en la pantalla, con la lista de productos seleccionados. Puedes hacerle una captura de pantalla o descargarlo como PDF para mostrarlo al llegar a la farmacia.</p>
-                </div>
+                </details>
 
-                <div class="faq-item">
-                    <h3>¿El ticket reserva el producto?</h3>
+                <details class="faq-item">
+                    <summary>¿El ticket reserva el producto?</summary>
                     <p>El ticket garantiza tu turno prioritario. La disponibilidad final se confirma en el establecimiento según el stock en tiempo real.</p>
-                </div>
+                </details>
             </div>
         </section>
 
@@ -113,16 +113,15 @@
         <div class="footer-grid">
             <section>
                 <h3>Contacto</h3>
-                <p>Email: pharmaclick@farmaceutica.es</p>
+                <p>Email: <a href="mailto:pharmaclick@farmaceutica.es>pharmaclick@farmaceutica.es"></a></p>
 
-                <h3>Teléfono</h3>
-                <p>+34 631 23 45 67</p>
+                <p>Teléfono: <a href="tel:+34631234567">+34 631 23 45 67</a></p>
             </section>
             <section>
                 <h3>Redes Sociales</h3>
-                <a href="https://twitter.com/..." aria-label="Twitter">Twitter</a>
-                <a href="https://www.instagram.com/?hl=es" aria-label="Instagram">Instagram</a>
-                <a href="https://www.tiktok.com/es-419/" aria-label="TikTok">TikTok</a>                
+                <a href="https://twitter.com/..." target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>                
             </section>
         </div>
         <p class="copyright">&copy; PharmaClick 2026 Todos los derechos reservados.</p>

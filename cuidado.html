@@ -35,106 +35,107 @@
     </header>
 
     <main role="main" id="main-content">
-        <section class="page-header">
+        <section class="page-header" aria-labelledby="titulo-catalogo">
             <h1>Cuidado Personal y Bienestar</h1>
             <p>Los mejores productos para tu higiene, piel y cuidado diario.</p>
 
             <div class="search-container">
-                <input type="text" id="buscador" onkeyup="buscarProducto()" placeholder="¿Qué producto buscas?">
-                <button class="btn-search">🔍 Buscar</button>
+                <label for="buscador" class="visually-hidden" style="display: none;">Buscar medicamento:</label>
+                <input type="search" id="buscador" onkeyup="buscarProducto()" placeholder="¿Qué producto buscas?">
+                <button class="btn-search" aria-label="buscar">🔍 Buscar</button>
             </div>
         </section>
 
         <section class="catalogo">
             <div class="product-grid">
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/sun-cream.jpg" alt="Fotoprotector ISDIN Fusion Water SPF 50">
-                    </div>
+                    </figure>
                     <h3>Fotoprotector ISDIN Fusion Water SPF 50</h3>
                     <p class="product-descr">Protector solar facial de fase acuosa que ofrece una textura ultraligera e hidratación intensa. No pica en los ojos. (50ml).</p>
                     <p class="product-price"><strong>Precio: 19,95€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Fotoprotector ISDIN Fusion Water SPF 50">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/cerave-crema.jpg" alt="CeraVe Crema Hidratante">
-                    </div>
+                    </figure>
                     <h3>CeraVe Crema Hidratante</h3>
                     <p class="product-descr">Ayuda a restaurar la barrera protectora de la piel del rostro y cuerpo con 3 ceramidas esenciales y ácido hialurónico. (340g).</p>
                     <p class="product-price"><strong>Precio: 12,90€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="CeraVe Crema Hidratante">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/bioderma.jpg" alt="Bioderma Sensibio H2O">
-                    </div>
+                    </figure>
                     <h3>Bioderma Sensibio H2O</h3>
                     <p class="product-descr">Agua micelar dermatológica que limpia, desmaquilla y calma las pieles sensibles. No necesita aclarado. (500ml).</p>
                     <p class="product-price"><strong>Precio: 15,50€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Bioderma Sensibio H2O">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/roche-posay.jpeg" alt="La Roche-Posay Lipikar Gel Lavant">
-                    </div>
+                    </figure>
                     <h3>La Roche-Posay Lipikar Gel Lavant</h3>
                     <p class="product-descr">Gel de ducha calmante y protector para pieles sensibles y secas. Apto para toda la familia. Sin parabenes. (400ml).</p>
                     <p class="product-price"><strong>Precio: 11,25€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir La Roche-Posay Lipikar Gel Lavant">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/PastaDientes.jpg" alt="Pasta de Dientes Lacer">
-                    </div>
+                    </figure>
                     <h3>Pasta de Dientes Lacer</h3>
                     <p class="product-descr">Acción anticaries, antiplaca y protectora de encías para mantener una boca sana a diario. (125ml).</p>
                     <p class="product-price"><strong>Precio: 4,50€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Pasta de Dientes Lacer">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/pilexil-champu-anticaida-300ml.jpg" alt="Champú Anticaída Pilexil">
-                    </div>
+                    </figure>
                     <h3>Champú Anticaída Pilexil</h3>
-                    <p class="product-descr">Tratamiento eficaz que frena la caída del cabello y estimula su crecimiento desde la raíz. (300ml)./p>
+                    <p class="product-descr">Tratamiento eficaz que frena la caída del cabello y estimula su crecimiento desde la raíz. (300ml).</p>
                     <p class="product-price"><strong>Precio: 14,80€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Champú Anticaída Pilexil">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/pomadaBebe.jpg" alt="Bepanthol Pomada Protectora">
-                    </div>
+                    </figure>
                     <h3>Bepanthol Pomada Protectora</h3>
                     <p class="product-descr">Cuidado y protección diaria de la piel del bebé frente a las irritaciones del pañal. (100g).</p>
                     <p class="product-price"><strong>Precio: 10,25€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Bepanthol Pomada Protectora">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/Sterillium-Gel-Antiseptico-Manos-475-Ml.jpg" alt="Gel Hidroalcohólico Sterillium">
-                    </div>
+                    </figure>
                     <h3>Gel Hidroalcohólico Sterillium</h3>
-                    <p class="product-descr">Ungüento para el alivio de la tos y la congestión nasal mediante vapores. (50g).</p>
+                    <p class="product-descr">Gel antiséptico para la desinfección higiénica de las manos por frotación. (50g).</p>
                     <p class="product-price"><strong>Precio: 7,40€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Gel Hidroalcohólico Sterillium">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/cuidado/neutrogena-labios-spf20-barra-48gr.png" alt="Neutrogena Protector Labial">
-                    </div>
+                    </figure>
                     <h3>Neutrogena Protector Labial</h3>
                     <p class="product-descr">Alivio inmediato para labios secos y agrietados. Protege contra el viento y el frío. (4.8g).</p>
                     <p class="product-price"><strong>Precio: 3,20€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Neutrogena Protector Labial">Añadir</button>
                 </article>
             </div>
         </section>
@@ -145,20 +146,20 @@
         <div class="footer-grid">
             <section>
                 <h3>Contacto</h3>
-                <p>Email: pharmaclick@farmaceutica.es</p>
+                <p>Email: <a href="mailto:pharmaclick@farmaceutica.es>pharmaclick@farmaceutica.es"></a></p>
 
-                <h3>Teléfono</h3>
-                <p>+34 631 23 45 67</p>
+                <p>Teléfono: <a href="tel:+34631234567">+34 631 23 45 67</a></p>
             </section>
             <section>
                 <h3>Redes Sociales</h3>
-                <a href="https://twitter.com/..." aria-label="Twitter">Twitter</a>
-                <a href="https://www.instagram.com/?hl=es" aria-label="Instagram">Instagram</a>
-                <a href="https://www.tiktok.com/es-419/" aria-label="TikTok">TikTok</a>                
+                <a href="https://twitter.com/..." target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>                
             </section>
         </div>
         <p class="copyright">&copy; PharmaClick 2026 Todos los derechos reservados.</p>
     </footer>
+
 
     <script src="JS/script.js"></script>
     

@@ -34,107 +34,108 @@
         </nav>
     </header>
 
-        <main role="main" id="main-content">
+    <main role="main" id="main-content">
         <section class="page-header">
             <h1>Movilidad y Autonomía</h1>
             <p>Soluciones y ayudas técnicas para mejorar tu calidad de vida y facilitar tu día a día.</p>
 
             <div class="search-container">
-                <input type="text" id="buscador" onkeyup="buscarProducto()" placeholder="¿Qué producto buscas?">
-                <button class="btn-search">🔍 Buscar</button>
+                <label for="buscador" class="visually-hidden" style="display: none;">Buscar medicamento:</label>
+                <input type="search" id="buscador" onkeyup="buscarProducto()" placeholder="¿Qué producto buscas?">
+                <button class="btn-search" aria-label="buscar">🔍 Buscar</button>
             </div>
         </section>
 
         <section class="catalogo">
             <div class="product-grid">
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/muletas.jpg" alt="Muletas de Aluminio Ergonómicas (Par)">
-                    </div>
+                    </figure>
                     <h3>Muletas de Aluminio Ergonómicas (Par)</h3>
                     <p class="product-descr">Ligeras y regulables en altura. Cuentan con coderas abatibles y puños suaves para evitar el dolor en las manos.</p>
                     <p class="product-price"><strong>Precio: 24,90€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Muletas de Aluminio Ergonómicas (Par)">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/andador.jpeg" alt="Andador Plegable con Ruedas">
-                    </div>
+                    </figure>
                     <h3>Andador Plegable con Ruedas</h3>
                     <p class="product-descr">Estructura de aluminio de alta resistencia con frenos de presión. Incluye asiento acolchado y cesta portaobjetos.</p>
                     <p class="product-price"><strong>Precio: 65,00€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Andador Plegable con Ruedas">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/baston.jpg" alt="Bastón Extensible con Puño Derby">
-                    </div>
+                    </figure>
                     <h3>Bastón Extensible con Puño Derby</h3>
                     <p class="product-descr">Elegante diseño en color negro con base de goma antideslizante. Muy ligero y fácil de ajustar a la estatura.</p>
                     <p class="product-price"><strong>Precio: 15,75€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Bastón Extensible con Puño Derby">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/silla-ducha.jpg" alt="Taburete de Baño Circular">
-                    </div>
+                    </figure>
                     <h3>Taburete de Baño Circular</h3>
                     <p class="product-descr">Patas de aluminio con conteras de caucho para máxima estabilidad. Orificios de drenaje integrados para mayor higiene.</p>
                     <p class="product-price"><strong>Precio: 32,40€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Taburete de Baño Circular">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/asidero.jpg" alt="Barra de Apoyo para Pared (45cm)">
-                    </div>
+                    </figure>
                     <h3>Barra de Apoyo para Pared (45cm)</h3>
                     <p class="product-descr">Fabricada en acero inoxidable con superficie rugosa para un mejor agarre. Ideal para instalar en baños o pasillos.</p>
                     <p class="product-price"><strong>Precio: 18,90€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Barra de Apoyo para Pared">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/elevador-wc.jpg" alt="Elevador de Inodoro con Tapa">
-                    </div>
+                    </figure>
                     <h3>Elevador de Inodoro con Tapa</h3>
                     <p class="product-descr">Añade 10cm de altura al WC para facilitar el sentado y levantado. Ideal para procesos post-operatorios.</p>
                     <p class="product-price"><strong>Precio: 38,20€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Elevador de Inodoro con Tapa">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/cojin-antiescaras.jpg" alt="Cojín de Viscoelástica Ergonómico">
-                    </div>
+                    </figure>
                     <h3>Cojín de Viscoelástica Ergonómico</h3>
                     <p class="product-descr">Previene la aparición de escaras distribuyendo la presión uniformemente. Funda transpirable e impermeable incluida.</p>
                     <p class="product-price"><strong>Precio: 42,00€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Cojín de Viscoelástica Ergonómico">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/pedalier.jpg" alt="Pedales Estáticos (Pedalier)">
-                    </div>
+                    </figure>
                     <h3>Pedales Estáticos (Pedalier)</h3>
                     <p class="product-descr">Máquina de ejercicios portátil para fortalecer piernas y brazos. Intensidad regulable para rehabilitación en casa.</p>
                     <p class="product-price"><strong>Precio: 35,60€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Pedales Estáticos (Pedalier)">Añadir</button>
                 </article>
 
                 <article class="product-card">
-                    <div class="product-image">    
+                    <figure class="product-image">    
                         <img src="images/movilidad/pastillero.jpg" alt="Organizador de Medicación Semanal">
-                    </div>
+                    </figure>
                     <h3>Organizador de Medicación Semanal</h3>
                     <p class="product-descr">Dividido en 7 días con 4 tomas diarias. Letras grandes y colores diferenciados para facilitar la lectura.</p>
                     <p class="product-price"><strong>Precio: 8,50€</strong></p>
-                    <button class="btn-add">Añadir</button>
+                    <button class="btn-add" aria-label="Añadir Organizador de Medicación Semanal">Añadir</button>
                 </article>
             </div>
         </section>
@@ -144,20 +145,20 @@
         <div class="footer-grid">
             <section>
                 <h3>Contacto</h3>
-                <p>Email: pharmaclick@farmaceutica.es</p>
+                <p>Email: <a href="mailto:pharmaclick@farmaceutica.es>pharmaclick@farmaceutica.es"></a></p>
 
-                <h3>Teléfono</h3>
-                <p>+34 631 23 45 67</p>
+                <p>Teléfono: <a href="tel:+34631234567">+34 631 23 45 67</a></p>
             </section>
             <section>
                 <h3>Redes Sociales</h3>
-                <a href="https://twitter.com/..." aria-label="Twitter">Twitter</a>
-                <a href="https://www.instagram.com/?hl=es" aria-label="Instagram">Instagram</a>
-                <a href="https://www.tiktok.com/es-419/" aria-label="TikTok">TikTok</a>                
+                <a href="https://twitter.com/..." target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>                
             </section>
         </div>
         <p class="copyright">&copy; PharmaClick 2026 Todos los derechos reservados.</p>
     </footer>
+
 
     <script src="JS/script.js"></script>
 

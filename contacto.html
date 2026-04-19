@@ -35,13 +35,13 @@
     </header>
 
     <main role="main" id="main-content">
-        <section class="page-header">
-            <h1>Contacto</h1>
+        <section class="page-header" aria-labelledby="titulo-contacto">
+            <h1 id="titulo-contacto">Contacto</h1>
             <p>¿Tienes dudas? Nuestro equipo farmacéutico te ayudará lo antes posible.</p>
         </section>
 
         <section class="contacto-container">
-            <form class="contacto-from" action="#">
+            <form class="contacto-from" action="#" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre Completo</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
@@ -49,12 +49,12 @@
 
                 <div class="form-group">
                     <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email name="email" placeholder="ejemplo@correo.com" required>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="mensaje">Mensaje o Consulta</label>
-                    <textarea type="text" id="mensaje" name="nombre" rows="5" placeholder="Escribe aquí..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn-add">ENVIAR FORMULARIO</button>
@@ -66,20 +66,20 @@
         <div class="footer-grid">
             <section>
                 <h3>Contacto</h3>
-                <p>Email: pharmaclick@farmaceutica.es</p>
+                <p>Email: <a href="mailto:pharmaclick@farmaceutica.es>pharmaclick@farmaceutica.es"></a></p>
 
-                <h3>Teléfono</h3>
-                <p>+34 631 23 45 67</p>
+                <p>Teléfono: <a href="tel:+34631234567">+34 631 23 45 67</a></p>
             </section>
             <section>
                 <h3>Redes Sociales</h3>
-                <a href="https://twitter.com/..." aria-label="Twitter">Twitter</a>
-                <a href="https://www.instagram.com/?hl=es" aria-label="Instagram">Instagram</a>
-                <a href="https://www.tiktok.com/es-419/" aria-label="TikTok">TikTok</a>                
+                <a href="https://twitter.com/..." target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>                
             </section>
         </div>
         <p class="copyright">&copy; PharmaClick 2026 Todos los derechos reservados.</p>
     </footer>
+
 
     <script src="JS/script.js"></script>
     
