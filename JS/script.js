@@ -31,10 +31,10 @@ function añadirProducto(evento) {
     setTimeout(() => boton.innerText = "Añadir", 800);
 }
 
-//DIBUJA LA LISTA
+//DIBUJA LA LISTA DE LA PAGINA DEL CARRITO
 function renderizarTicket() {
-    const div = document.getElementById('contenedor-carrito');
-    const suma = document.getElementById('suma-total');
+    const div = document.getElementById('cart-items'); 
+    const suma = document.getElementById('cart-total');
     if (!div) return; 
 
     let html = "";
@@ -78,7 +78,7 @@ function generarTicketFinal() {
     
     if (carrito.length === 0) return alert("El carrito está vacío.");
 
-    // 1. Rellenar los productos en el ticket visual
+    //RELLENAR LOS PRODUCTOS EN EL TICKET 
     let contenidoHTML = "";
     let agrupados = {};
     carrito.forEach(p => {
@@ -91,29 +91,29 @@ function generarTicketFinal() {
                           </p>`;
     }
 
-    // 2. Meter los datos en el Modal
+    //PONER LOS DATOS EN EL TICKET FINAL - RECUADRITO FINAL
     document.getElementById('contenido-ticket-final').innerHTML = contenidoHTML;
     document.getElementById('total-ticket-final').innerText = total;
     document.getElementById('codigo-ticket').innerText = "CÓDIGO: PH-" + Math.floor(Math.random()*9000+1000);
 
-    // 3. Mostrar aviso de receta si está marcado
+    //AVISA SI LA RECETA ESTÁ MARCADA
     if(checkReceta && checkReceta.checked) {
         document.getElementById('aviso-receta-ticket').style.display = "block";
     } else {
         document.getElementById('aviso-receta-ticket').style.display = "none";
     }
 
-    // 4. Mostrar el modal (cambiamos el display de none a flex)
+    //MOSTRAMOS EL TICKET FINAL - RECUADRITO FINAL
     document.getElementById('modal-ticket').style.display = "flex";
 }
 
-// Esta función limpia todo y te echa a la página de inicio
+//LIMPIA TODO Y HACE VOLVER AL INICIO
 function cerrarYFinalizar() {
     sessionStorage.removeItem('pharma-ticket');
     window.location.href = "index.html";
 }
 
-//AL CARGAR LA PAGINA
+//AL CARGAR LA PAGINA 
 document.addEventListener('DOMContentLoaded', () => {
     actualizarMenu();
     
@@ -125,37 +125,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ESTA FUNCIÓN HACE QUE EL CHECK DE LA RECETA "REACCIONE"
+//ESTA FUNCION HACE QUE EL CHECK DE LA RECETA REACCIONE
 function avisarReceta() {
     const check = document.getElementById('check-receta');
     const suma = document.getElementById('suma-total');
     
     if (check.checked) {
-        // Si quieres que pase algo visual, podemos cambiar el color del total o sacar un mensaje
-        //suma.style.color = "#e67e22"; // Color naranja para indicar que el precio cambiará con receta
         alert("📝 Receta anotada. El descuento de la Seguridad Social se aplicará al pagar en la farmacia.");
     } else {
-        suma.style.color = "#2a9d8f"; // Vuelve al color original (verde)
+        suma.style.color = "#2a9d8f";
     }
 }
 
 function buscarProducto() {
-    // 1. Capturamos lo que se escribe
+    //CAPTURA LO QUE SE ESCRIBE
     let filtro = document.getElementById('buscador').value.toLowerCase();
     //let filtro = input.value.toLowerCase();
     
-    // 2. Seleccionamos todas las tarjetas de productos
+    //SELECCIONA TODAS LAS TARJETAS
     let tarjetas = document.querySelectorAll('.product-card');
 
-    // 3. Filtramos
+    //FILTRA SI ESTÁ LA PALABRA BUSCADA 
     tarjetas.forEach(tarjeta => {
-        // Buscamos el h3 dentro de esa tarjeta específica
+        //BUSCA EL H3 ESPECIFICO 
         let nombre = tarjeta.querySelector('h3').innerText.toLowerCase();
 
         if (nombre.includes(filtro)) {
-            tarjeta.style.display = ""; // Muestra la tarjeta (usa el estilo por defecto)
+            tarjeta.style.display = ""; //MUESTRA LA TARJETA
         } else {
-            tarjeta.style.display = "none"; // La esconde
+            tarjeta.style.display = "none"; //LAS ESCONDE
         }
     });
 }
