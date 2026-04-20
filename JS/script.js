@@ -54,8 +54,8 @@ function renderizarTicket() {
         let subtotal = item.precio * item.cantidad;
         total += subtotal;
         html += `
-            <div style="display: flex; justify-content: space-between; padding: 12px; border-bottom: 1px solid #eee;">
-                <span><strong>${item.cantidad}x</strong> ${nombre}</span>
+            <div style="display: flex; justify-content: space-between; width:100%; padding: 12px; border-bottom: 1px solid #eee;">
+                <span style="text-align: keft;"><strong>${item.cantidad}x</strong> ${nombre}</span>
                 <span style="font-weight: bold; color: #2a9d8f;">${subtotal.toFixed(2)}€</span>
             </div>`;
     }
@@ -74,7 +74,7 @@ function vaciarCarrito() {
 
 function generarTicketFinal() {
     const checkReceta = document.getElementById('check-receta');
-    const total = document.getElementById('suma-total').innerText;
+    const total = document.getElementById('cart-total').innerText;
     
     if (carrito.length === 0) return alert("El carrito está vacío.");
 
@@ -86,7 +86,7 @@ function generarTicketFinal() {
     });
 
     for (let nombre in agrupados) {
-        contenidoHTML += `<p style="display:flex; justify-content:space-between;">
+        contenidoHTML += `<p style="display:flex; justify-content:space-between; margin: 5px 0;">
                             <span>${agrupados[nombre]}x ${nombre}</span>
                           </p>`;
     }
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //ESTA FUNCION HACE QUE EL CHECK DE LA RECETA REACCIONE
 function avisarReceta() {
     const check = document.getElementById('check-receta');
-    const suma = document.getElementById('suma-total');
+    const suma = document.getElementById('cart-total');
     
     if (check.checked) {
         alert("📝 Receta anotada. El descuento de la Seguridad Social se aplicará al pagar en la farmacia.");
